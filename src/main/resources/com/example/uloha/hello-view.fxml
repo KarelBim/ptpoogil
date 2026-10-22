@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.VBox?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.ToggleGroup?>
+<VBox alignment="CENTER" spacing="20.0" xmlns:fx="http://javafx.com/fxml"
+      fx:controller="com.example.uloha.HelloController">
+    <padding>
+        <Insets bottom="20.0" left="20.0" right="20.0" top="20.0"/>
+    </padding>
+    <CheckBox text="newsletter" fx:id="ch1"/>
+    <CheckBox text="tmavý režim" fx:id="ch2"/>
+    <CheckBox text="upozornění" fx:id="ch3"/>
+    <fx:define>
+        <ToggleGroup fx:id="lvl"/>
+    </fx:define>
+    <RadioButton toggleGroup="$lvl" fx:id="zacatek" text="začátečník" selected="true"/>
+    <RadioButton toggleGroup="$lvl" fx:id="pokrocily" text="pokročilý"></RadioButton>
+    <RadioButton toggleGroup="$lvl" fx:id="expert" text="expert"></RadioButton>
+    <Button onAction="#zobrazit" text="zobrazit"></Button>
+    <Label fx:id="hodnoty"></Label>
+    <Button text="obnovit výchozí stav" onAction="#vychStav"></Button>
+
+</VBox>
